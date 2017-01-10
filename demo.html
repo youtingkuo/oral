@@ -341,6 +341,7 @@ var fframe2 = new THREE.Mesh(new THREE.PlaneGeometry(6.3, 0.08), new THREE.MeshB
   document.addEventListener('mousedown', onDocumentMouseDown, false);
   
   window.addEventListener('resize', onWindowResize, false);
+  window.performance = window.performance || Date;
 }
 
 function onDocumentMouseDown(event) {

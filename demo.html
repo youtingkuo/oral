@@ -62,6 +62,15 @@ body {
 }
 
 </style>
+
+<audio id="soundtrack" autoplay loop style="display:none">
+</audio>
+<audio id="slapSound" style="display:none">
+<source src="https://youtingkuo.github.io/sound/slap.mp3" type='audio/mp3'>
+</audio>
+<audio id="spikeSound" style="display:none">
+<source src="https://youtingkuo.github.io/sound/spike.mp3" type='audio/mp3'>
+</audio>
 </head>
 
 <body> 
@@ -83,14 +92,6 @@ body {
 <script src="https://youtingkuo.github.io/oral/referee.js"></script>
 <script src="https://youtingkuo.github.io/oral/agent.js"></script>
 <script src="https://youtingkuo.github.io/oral/robot.js"></script>
-<audio id="soundtrack" autoplay loop style="display:none">
-</audio>
-<audio id="slapSound" style="display:none">
-<source src="https://youtingkuo.github.io/sound/slap.mp3" type='audio/mp3'>
-</audio>
-<audio id="spikeSound" style="display:none">
-<source src="https://youtingkuo.github.io/sound/spike.mp3" type='audio/mp3'>
-</audio>
 
 <script>
 var scene = new THREE.Scene();
@@ -340,6 +341,7 @@ var fframe2 = new THREE.Mesh(new THREE.PlaneGeometry(6.3, 0.08), new THREE.MeshB
   document.addEventListener('mousedown', onDocumentMouseDown, false);
   
   window.addEventListener('resize', onWindowResize, false);
+  window.performance = window.performance || Date;
 }
 
 function onDocumentMouseDown(event) {
